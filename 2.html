@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width, height=device-height initial-scale=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+        <title>belligeaLIFE</title>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+			/*
+			function fixiFrame () {
+			   if ((android) && (androidVersion > 3)) {
+				  iFrameContentHeight = document.getElementById('theiFrame').contentDocument.body.offsetHeight;
+				  document.getElementById('theiFrame').style.height = iFrameContentHeight + 'px';
+			   }
+			}
+			*/
+        </script>
+		<script type='text/javascript' src='js/jquery.js'></script>
+		<script type="text/javascript" src="js/jquery.bgstretcher.js"></script>
+		<script type="text/javascript">
+            (function($) {
+                jQuery(document).ready(function(){
+
+                //  Initialize Backgound Stretcher
+                    jQuery(document).bgStretcher({
+                        images: ['img/img.jpg'],
+						resizeProportionally: 'true',
+						slideShowSpeed: 2000,
+						transitionEffect: 'fade',
+						anchoring: 'bottom center',
+						anchoringImg: 'bottom center',
+						slideShow : true,
+                        imageWidth: 900,
+                        imageHeight: 506
+                    });
+                });
+            })(jQuery);
+        </script>
+
+		<script src="js/jquery-ui.js"></script>
+        <script>
+            jQuery(function() {
+                jQuery( "#accordion" ).accordion({
+                    heightStyle: "content",
+                    collapsible: true, active: false
+                });
+                jQuery( ".child1" ).accordion({
+                    heightStyle: "content",
+                    collapsible: true, active: false
+                });
+                jQuery( ".child2" ).accordion({
+                    heightStyle: "content",
+                    collapsible: true, active: false
+                });
+                jQuery( ".child3" ).accordion({
+                    heightStyle: "content",
+                    collapsible: true, active: false
+                });
+            });
+        </script>
+        <script type='text/javascript'>
+			jQuery(document).ready(function (){
+			jQuery('div#int').load('http://www.belligea.it/xapp/index.php');     
+			});
+		</script>
+
+    </head>
+
+    <body>
+    <div id="masthead" class="site-header" role="banner">
+
+        <div class="header-main">
+            <img src="img/logo-belligea.png" />
+        </div>
+
+    </div><!-- #masthead -->
+
+    <div id="int"></div>
+        <!--div class="app">
+            <div id="deviceready" class="blink">
+                <p class="event listening">Benvenuti!</p>
+                <p class="event received" style="height:0; width:0;">Benvenuti!</p>
+            </div>
+        </div-->
+        <!--iframe src="http://www.belligea.it/xapp/index.php" style="border:none; z-index:100; position:fixed; bottom:0; width:100%; height:100%;"></iframe-->
+
+		<!--iframe src="http://www.belligea.it/xapp/index.php" style="border:none; z-index:100; position:fixed; bottom:0; width:100%; height:100%;" width="100%" scrolling="yes" frameBorder="0" id="theiFrame" onLoad="fixiFrame();"></iframe-->
+    </body>
+</html>

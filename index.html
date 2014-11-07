@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<!--meta name="viewport" content="width=device-width, height=device-height initial-scale=1"-->
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+        <title>belligeaLIFE</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+		<script type='text/javascript' src='js/jquery.js'></script>
+		<script type="text/javascript" src="js/jquery.bgstretcher.js"></script>
+		<script type="text/javascript">
+			(function($) {
+				jQuery(document).ready(function(){
+					jQuery(document).bgStretcher({
+					images: ['img/img.jpg'],
+					resizeProportionally: 'true',
+					slideShowSpeed: 2000,
+					transitionEffect: 'fade',
+					anchoring: 'bottom center',
+					anchoringImg: 'bottom center',
+					slideShow : true,
+					imageWidth: 900,
+					imageHeight: 506
+					});
+				});
+			})(jQuery);
+
+        </script>
+		<script src="js/jquery-ui.js"></script>
+        </script>
+		<script type="text/javascript">
+            jQuery(function() {
+                jQuery( "#accordion" ).accordion({
+                    heightStyle: "content",
+                    collapsible: true, active: false
+                });
+                jQuery( ".child1" ).accordion({
+                    heightStyle: "content",
+                    collapsible: true, active: false
+                });
+                jQuery( ".child2" ).accordion({
+                    heightStyle: "content",
+                    collapsible: true, active: false
+                });
+                jQuery( ".child3" ).accordion({
+                    heightStyle: "content",
+                    collapsible: true, active: false
+                });
+            });
+        </script>
+
+
+        <link rel='stylesheet' id='responsive-lightbox-swipebox-front-css'  href='css/swipebox.css?ver=3.9.2' type='text/css' media='all' />
+        <script type='text/javascript' src='js/jquery.swipebox.min.js?ver=3.9.2'></script>
+        <script type='text/javascript'>
+        /* <![CDATA[ */
+        var rlArgs = {"script":"swipebox","selector":"lightbox","custom_events":" ajaxComplete","activeGalleries":"1","animation":"0","hideBars":"1","hideBarsDelay":"5000","videoMaxWidth":"1080"};
+        /* ]]> */
+        </script>
+        <script type='text/javascript' src='js/front.js?ver=3.9.2'></script>
+
+
+        <script type='text/javascript'>
+			jQuery(document).ready(function (){
+			jQuery('div#int').load('http://www.belligea.it/xapp/');  
+			});
+		</script>
+
+
+        <script type='text/javascript'>
+			var myWidth = 0, myHeight = 0;
+			if( typeof( window.innerWidth ) == 'number' ) {
+				myWidth = window.innerWidth; myHeight = window.innerHeight;
+			} else if( document.documentElement && ( document.documentElement.clientWidth ||document.documentElement.clientHeight ) ) {
+				myWidth = document.documentElement.clientWidth; myHeight = document.documentElement.clientHeight;
+			} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+				myWidth = document.body.clientWidth; myHeight = document.body.clientHeight;
+			}
+		</script>
+
+
+        <script type='text/javascript'>
+			function getUrlVars() {
+				var vars = {};
+				var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+					vars[key] = value;
+				});
+				return vars;
+			}
+/*
+				var pagina = getUrlVars()["pagina"];
+				var lat1 = getUrlVars()["lat"];
+				var lng1 = getUrlVars()["lng"];
+				var tel1 = getUrlVars()["tel"];
+				var mobile1 = getUrlVars()["mobile"];
+				var email1 = getUrlVars()["email"];
+				var linkk = getUrlVars()["link"];
+				var idd = getUrlVars()["idd"];
+				var title = getUrlVars()["title"];
+				var title2 = decodeURI(getUrlVars()["title"]);
+
+			function defaultVars() {
+				if (tel1!==''){
+					var tel2='<a class="tel" href="tel:'+tel1+'">&nbsp;</a>';
+					jQuery(tel2).appendTo('#icone');
+				}
+				if (mobile1!==''){
+					var mobile2='<a class="mobile" href="tel:'+mobile1+'">&nbsp;</a>';
+					jQuery(mobile2).appendTo('#icone');
+				}
+				if (linkk!==''){
+					var linkk='<a class="link" href="tel:'+linkk+'">&nbsp;</a>';
+					jQuery(linkk).appendTo('#icone');
+				}
+				if (email1!==''){
+					var email2='<a class="email" href="mailto:'+email1+'">&nbsp;</a>';
+					jQuery(email2).appendTo('#icone');
+				}
+				if (lat1!==''){
+					var map='<a class="map" href="map.html?pagina='+pagina+'&lat='+lat1+'&lng='+lng1+'&tel='+tel1+'&mobile='+mobile1+'&email='+email1+'&idd='+idd+'&title='+title+'">&nbsp;</a>';
+					jQuery(map).appendTo('#icone');
+				}
+			}
+*/
+			function fixiFrame () {
+				if ((android) && (androidVersion > 3)) {
+				/*
+				  iFrameContentHeight = document.getElementById('theiFrame').contentDocument.body.offsetHeight;
+				*/
+//				  document.getElementById('theiFrame').style.height = iFrameContentHeight + 'px';
+//				  document.getElementById('theiFrame');
+				}
+			}
+
+			jQuery(document).ready(function(){
+				jQuery('div.index').css( "height", myHeight);
+				jQuery('div.mappa').css( "height", myHeight);
+				jQuery('div.mappa').hide();
+			});
+
+		</script>
+
+    </head>
+
+    <body>
+
+		<!-- inizio mappa -->
+
+		<div class="mappa">
+
+            <div id="see"></div>
+
+        </div>
+
+        <!-- fine mappa -->
+
+
+
+		<!-- inizio pagina -->
+        
+        <div class="pagina">
+
+            <!--div class="tag_sopra">
+                <div class="icone" id="icone"></div>
+            </div-->
+
+            <div id="log"></div>
+
+        </div>
+
+        <!-- fine pagina -->
+
+
+
+		<!-- inizio index -->
+
+		<div class="index">
+
+            <div id="masthead" class="site-header" role="banner">
+
+                <div class="header-main">
+                    <img src="img/logo-belligea.png" />
+                </div>
+
+            </div><!-- #masthead -->
+
+            <div id="int"></div>
+
+        </div>
+
+        <!-- fine index -->
+
+
+
+    </body>
+</html>
